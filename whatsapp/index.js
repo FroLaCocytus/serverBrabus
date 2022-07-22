@@ -14,15 +14,10 @@ client.on('ready', () => {
     console.log('Client is ready!');
     client.getChats().then(chats => {
         const myGroup = chats.find((chat) => chat.name === 'Brabus')
-        client.sendMessage(myGroup.id._serialized, "Я нашёл группу сучки")
+        client.sendMessage(myGroup.id._serialized, "Подключился емае")
     })
 });
 
-client.on('message', msg => {
-    if (msg.body == 'Привет') {
-        msg.reply('Привет!');
-    }
-});
 
 
 module.exports = client
